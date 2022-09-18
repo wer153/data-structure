@@ -14,7 +14,8 @@ class Hash:
         return self._hash(key)
 
     def _is_unhashable(self, key):
-        return type(key) not in IMMUTABLE_BUILT_IN_TYPES and hasattr(key, '__hash__') is not None
+        """TODO: 커스텀 객체가 hashable한지 구현필요"""
+        return type(key) not in IMMUTABLE_BUILT_IN_TYPES
 
     def _hash(self, key):
         """
